@@ -127,9 +127,9 @@ class SAN:
         self.optimizer = None
         self.num_params = None
 
-    def fit(self, features, labels):  # , onehot=False
+    def fit(self, features, labels, y_length):  # , onehot=False
 
-        nun = len(np.unique(labels))
+        nun = len(y_length)
         one_hot_labels = []
         for j in range(len(labels)):
             lvec = np.zeros(nun)
